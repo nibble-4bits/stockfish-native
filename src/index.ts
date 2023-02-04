@@ -160,7 +160,7 @@ class Stockfish {
       command,
       (response: string) => response.indexOf(`bestmove`) > -1
     );
-    const lines = split(response, "\n");
+    const lines = split(response, EOL);
     const last = lines[lines.length - 1];
     return (last.match(/bestmove[\s]*([a-z,0-9]*)/) || [])[1];
   }
@@ -229,13 +229,13 @@ class Stockfish {
   }
   async board(): Promise<Board> {
     const rawResponse = await this.do(`d`, endAfterLabel("Checkers"));
-    const [board, data] = split(rawResponse, "\n\n");
-    const labled = parseLabeled(data);
-    const pieces = split(board, "\n")
+    const [board, data] = split(rawResponse, EOL.repeat(2));
+    const labeled = parseLabeled(data);
+    const pieces = split(board, EOL)
       .filter((line) => line.indexOf(" ") > 0)
       .map((line) => split(trim(line, "\\|"), "|"));
     return {
-      ...labled,
+      ...labeled,
       pieces,
     } as Board;
   }
