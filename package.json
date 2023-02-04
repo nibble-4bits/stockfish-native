@@ -1,5 +1,5 @@
 {
-  "name": "stockfish-native",
+  "name": "@nibble-4bits/stockfish-native",
   "version": "0.3.0",
   "description": "UCI interface for native Stockfish",
   "main": "lib/index.js",
@@ -21,15 +21,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/elviswolcott/stockfish-native.git"
+    "url": "git+https://github.com/nibble-4bits/stockfish-native.git"
   },
   "keywords": [],
   "author": "Elvis Wolcott",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/elviswolcott/stockfish-native.git"
+    "url": "https://github.com/nibble-4bits/stockfish-native.git"
   },
-  "homepage": "https://github.com/elviswolcott/stockfish-native#readme",
+  "homepage": "https://github.com/nibble-4bits/stockfish-native#readme",
   "devDependencies": {
     "@types/jest": "^25.1.0",
     "@types/node": "^14.0.14",
